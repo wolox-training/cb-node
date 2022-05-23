@@ -1,5 +1,5 @@
 {
-  "name": "cb-node",
+  "name": "typescript-base",
   "version": "0.1.0",
   "description": "Example base for typescript projects",
   "engines": {
@@ -25,7 +25,7 @@
     "dev": "ts-node-dev --respawn --transpileOnly ./server.ts",
     "start": "npm run build && node ./dist/server.js",
     "test": "npm run test-basic -- --runInBand",
-    "test-basic": "NODE_ENV=testing jest --forceExit --detectOpenHandles --verbose",
+    "test-basic": "SET NODE_ENV=testing jest --forceExit --detectOpenHandles --verbose",
     "test-inspect": "NODE_ENV=testing node --inspect --debug-brk --detectOpenHandles jest"
   },
   "cacheDirectories": [
@@ -33,15 +33,15 @@
   ],
   "main": "app.js",
   "author": "Wolox",
-  "homepage": "https://github.com/wolox-training/cb-node#readme",
+  "homepage": "https://github.com/mpicollo-wolox/typescript-base",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wolox-training/cb-node.git"
+    "url": "https://github.com/mpicollo-wolox/typescript-base.git"
   },
   "bugs": {
-    "url": "https://github.com/wolox-training/cb-node/issues",
-    "email": "clberrio4@gmail.com"
+    "url": "https://github.com/mpicollo-wolox/typescript-base/issues",
+    "email": "tls@wolox.com.ar"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -64,7 +64,7 @@
     ]
   },
   "dependencies": {
-    "axios": "^0.27.2",
+    "axios": "^0.19.2",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.2",
     "cors": "^2.8.4",
@@ -112,15 +112,15 @@
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-prettier": "^3.1.2",
     "husky": "^4.2.3",
-    "jest": "^28.1.0",
+    "jest": "^24.9.0",
     "nock": "^12.0.2",
     "nodemon": "^2.0.2",
     "prettier": "^1.19.1",
     "prettier-eslint": "^9.0.0",
     "prompt": "^1.0.0",
     "supertest": "^4.0.2",
-    "ts-jest": "^28.0.2",
-    "ts-node-dev": "^1.1.8",
+    "ts-jest": "^24.3.0",
+    "ts-node-dev": "1.0.0-pre.44",
     "tslint": "^6.0.0",
     "typescript": "^3.8.2"
   },
