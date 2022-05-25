@@ -7,9 +7,12 @@ const API_KEY = config.hearthstone.apiKey as string;
 
 const client = axios.create({
   baseURL: BASE_URL,
-  responseType: 'json'
+  responseType: 'json',
+  headers: {
+    'X-RapidAPI-Host': API_HOST,
+    'X-RapidAPI-Key': API_KEY
+  }
 });
-
 
 export interface Hearthstone {
   basic: Basic[];
@@ -46,7 +49,6 @@ export interface Mechanic {
   name: string;
 }
 
-
 export interface Info {
   patch: string;
   classes: string[];
@@ -78,25 +80,13 @@ export interface Locales {
   thTh: string;
 }
 
-
-
 export async function getAllCards(): Promise<Hearthstone[]> {
-  const response = await client.get<Hearthstone[]>('cards', {
-    headers: {
-      'X-RapidAPI-Host': API_HOST,
-      'X-RapidAPI-Key': API_KEY
-    }
-  });
+  const response = await client.get<Hearthstone[]>('cards');
   return response.data;
 }
 
 export async function getInfo(): Promise<Info> {
-  const response = await client.get<Info>('info', {
-    headers: {
-      'X-RapidAPI-Host': API_HOST,
-      'X-RapidAPI-Key': API_KEY
-    }
-  });
+  const response = await client.get<Info>('info');
   return response.data;
 }
 

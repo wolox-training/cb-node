@@ -3,6 +3,7 @@ import { Application } from 'express';
 import { healthCheck } from './controllers/healthCheck';
 import { getUsers, getUserById, createUser } from './controllers/users';
 import { getTodos } from './controllers/todos';
+import { findCards, findInfoAPI } from './controllers/cards';
 
 export const init = (app: Application): void => {
   app.get('/health', healthCheck);
@@ -10,4 +11,6 @@ export const init = (app: Application): void => {
   app.post('/users', createUser);
   app.get('/users/:id', getUserById);
   app.get('/todos', getTodos);
+  app.get('/cards', findCards);
+  app.get('/info', findInfoAPI);
 };

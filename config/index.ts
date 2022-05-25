@@ -60,7 +60,9 @@ const config: IConfig = {
     baseURL: process.env.TODOS_API_BASE_URL || 'https://jsonplaceholder.typicode.com'
   },
   hearthstone: {
-    baseURL: process.env.HEARTSTONE_API_BASE_URL || 'https://jsonplaceholder.typicode.com'
+    baseURL: process.env.HEARTSTONE_API_BASE_URL || 'https://jsonplaceholder.typicode.com',
+    apiHost: process.env.HEARTSTONE_API_HOST,
+    apiKey: process.env.HEARTSTONE_API_KEY
   }
 };
 
