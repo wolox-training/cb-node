@@ -22,7 +22,7 @@ module.exports = {
     "wolox-node"
   ],
   "rules": {
-    "linebreak-style": 0,
+    "linebreak-style": ["error", "windows"],
     "brace-style": "off",
     "camelcase": "off",
     "class-name-casing": "off",
@@ -42,9 +42,9 @@ module.exports = {
     "semi": "off",
     "class-methods-use-this": "off",
     "@typescript-eslint/no-inferrable-types": "off",
-    "@typescript-eslint/array-type": ["error", { "default": "array"}],
-    "@typescript-eslint/brace-style": ["error","1tbs", { "allowSingleLine": true }],
-    "@typescript-eslint/camelcase": ["error",{ "properties": "never"}],
+    "@typescript-eslint/array-type": ["error", { "default": "array" }],
+    "@typescript-eslint/brace-style": ["error", "1tbs", { "allowSingleLine": true }],
+    "@typescript-eslint/camelcase": ["error", { "properties": "never" }],
     "@typescript-eslint/class-name-casing": ["error", { "allowUnderscorePrefix": true }],
     "@typescript-eslint/consistent-type-assertions": "error",
     "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
