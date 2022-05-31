@@ -1,0 +1,49 @@
+{
+  "compilerOptions": {
+    /** Basic Options **/
+    "allowJs": true,
+    "checkJs": true,
+    "declaration": true,
+    "downlevelIteration": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "lib": ["es2018", "es6"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "outDir": "dist",
+    "sourceMap": true,
+    "target": "es2018",
+    "removeComments": true,
+
+    /** Strict Type-Checking Options **/
+    "alwaysStrict": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strict": true,
+    "strictFunctionTypes": false,
+    "strictPropertyInitialization": false,
+    "skipLibCheck": true,
+    "suppressImplicitAnyIndexErrors": true,
+
+    /** Additional Checks **/
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+
+    /** Source Map Options **/
+    "baseUrl": ".",
+    "paths": {
+      "*": ["node_modules/@types/*", "./src/@types/*"]
+    },
+    /** Experimental Options **/
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
+  },
+  "include": [
+    "./**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}
