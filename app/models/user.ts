@@ -8,10 +8,10 @@ export class User {
   @Column('varchar')
   name: string;
 
-  @Column('varchar')
-  lastname: string;
+  @Column('varchar', { name: 'last_name' })
+  lastName: string;
 
-  @Column('varchar')
+  @Column('varchar', { unique: true })
   email: string;
 
   @Column('varchar')
