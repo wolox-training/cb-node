@@ -10,9 +10,9 @@ export class User {
   name: string;
 
   @Column('varchar')
-  lastname: string;
+  lastName: string;
 
-  @Column('varchar')
+  @Column('varchar', { unique: true })
   email: string;
 
   @Column('varchar')
