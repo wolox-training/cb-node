@@ -8,7 +8,7 @@ import { findCards, findInfoAPI } from './controllers/cards';
 export const init = (app: Application): void => {
   app.get('/health', healthCheck);
   app.get('/users', getUsers);
-  app.post('/users', createUser);
+  app.post('/users/signup', createUser);
   app.get('/users/:id', getUserById);
   app.get('/todos', getTodos);
   app.get('/cards', findCards);

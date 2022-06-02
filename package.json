@@ -65,6 +65,7 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
+    "bcrypt": "^5.0.1",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.2",
     "cors": "^2.8.4",
