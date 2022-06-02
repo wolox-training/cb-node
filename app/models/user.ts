@@ -8,7 +8,7 @@ export class User {
   @Column('varchar')
   name: string;
 
-  @Column('varchar', { name: 'last_name' })
+  @Column('varchar')
   lastName: string;
 
   @Column('varchar', { unique: true })
