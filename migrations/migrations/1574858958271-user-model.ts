@@ -1,19 +1,14 @@
-import { MigrationInterface, QueryRunner, Table } from 'typeorm';
+import { MigrationInterface, QueryRunner } from 'typeorm';
 
 export class UserModel1574858958271 implements MigrationInterface {
-  public up(queryRunner: QueryRunner): Promise<void> {
-    return queryRunner.createTable(
-      new Table({
-        name: 'User',
-        columns: [
-          { name: 'id', type: 'int', isPrimary: true, generationStrategy: 'increment', isGenerated: true },
-          { name: 'username', type: 'varchar' }
-        ]
-      })
-    );
+  public async up(queryRunner: QueryRunner): Promise<void> {
+    await queryRunner.query('ALTER TABLE "User" ADD "last_name" varchar NULL');
+    await queryRunner.query('ALTER TABLE "User" ADD "email" varchar NOT NULL');
+    await queryRunner.query('ALTER TABLE "User" ADD "password" varchar NOT NULL');
   }
 
   public down(queryRunner: QueryRunner): Promise<void> {
-    return queryRunner.dropTable('User');
+    queryRunner.clearSqlMemory();
+    throw Error('not implemented yet');
   }
 }

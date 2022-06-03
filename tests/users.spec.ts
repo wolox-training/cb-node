@@ -3,7 +3,7 @@ import userRepository from '../app/services/users';
 import app from '../app';
 
 describe('users', () => {
-  beforeEach(() => userRepository.createMany([{ username: 'u1' }, { username: 'u2' }]));
+  beforeEach(() => userRepository.createMany([{ name: 'u1' }, { name: 'u2' }]));
   describe('/users GET', () => {
     it('should return all users', (done: jest.DoneCallback) => {
       request(app)
@@ -22,7 +22,7 @@ describe('users', () => {
         .send({ username: 'u3' })
         .expect(201)
         .then(async () => {
-          const user = await userRepository.findUser({ username: 'u3' });
+          const user = await userRepository.findUser({ name: 'u3' });
           expect(user).not.toBeNull();
           done();
         });

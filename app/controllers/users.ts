@@ -14,7 +14,7 @@ export function getUsers(req: Request, res: Response, next: NextFunction): Promi
 
 export function createUser(req: Request, res: Response, next: NextFunction): Promise<Response | void> {
   return userService
-    .createAndSave({ username: req.body.username } as User)
+    .createAndSave({ name: req.body.name } as User)
     .then((user: User) => res.status(HttpStatus.CREATED).send({ user }))
     .catch(next);
 }
